@@ -1,4 +1,6 @@
-﻿namespace HS.IoT.Demo.Abstractions;
+﻿using HS.IoT.Demo.DigitalTwin;
+
+namespace HS.IoT.Demo.Abstractions;
 
 public class Subscription
 {

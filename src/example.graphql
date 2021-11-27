@@ -1,0 +1,45 @@
+query CellData {
+    cellData {
+        state
+        lastUpdate
+        temperature
+        energyConsumption {
+            currentConsumption
+            totalConsumption
+            currentConsumption
+        }
+        extractionRobot {
+            ...Robot
+        }
+        storageRobot {
+            ...Robot
+        }
+        events(
+            where: {
+                and: [{ eventState: { eq: ACTIVE } }, { eventType: { eq: ERROR } }]
+            }
+        ) {
+            id
+            eventType
+            eventState
+        }
+    }
+}
+
+fragment Robot on Robot {
+    manufacturer {
+        name
+    }
+    axle1 {
+        ...Axle
+    }
+    axle2 {
+        ...Axle
+    }
+}
+
+fragment Axle on Axle {
+    currentPosition
+    isMoving
+    movingSpeed
+}

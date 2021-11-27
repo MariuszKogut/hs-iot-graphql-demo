@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>HS.IoT.Demo.DigitalTwin</AssemblyName>
+        <RootNamespace>HS.IoT.Demo.DigitalTwin</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="HotChocolate.Data" Version="12.3.2" />
+      <PackageReference Include="Bogus" Version="34.0.1" />
+    </ItemGroup>
+
+</Project>

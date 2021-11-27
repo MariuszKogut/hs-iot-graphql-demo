@@ -10,11 +10,16 @@
 
     <ItemGroup>
         <PackageReference Include="HotChocolate.AspNetCore" Version="12.3.2" />
+        <PackageReference Include="HotChocolate.Data" Version="12.3.2" />
         <PackageReference Include="System.Reactive" Version="5.0.0" />
     </ItemGroup>
 
     <ItemGroup>
       <Folder Include="obj\Debug\net6.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DigitalTwin\DigitalTwin.csproj" />
     </ItemGroup>
 
 </Project>
