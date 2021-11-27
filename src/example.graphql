@@ -1,5 +1,7 @@
 query CellData {
-    cellData {
+    cells(
+        where: { and: [{ temperature: { gt: 100 }, state: { eq: "stopped" } }] }
+    ) {
         state
         lastUpdate
         temperature

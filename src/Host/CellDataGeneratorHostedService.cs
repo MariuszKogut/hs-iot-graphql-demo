@@ -21,7 +21,7 @@ public class DataGeneratorHostedService : IHostedService
     {
         _disposable = Observable
             .Interval(TimeSpan.FromMilliseconds(500))
-            .Select(_ => _cellSimulation.CreateCellWithFullData())
+            .Select(_ => _cellSimulation.CreateCell())
             .Do(async x => await _sender.SendAsync(nameof(Subscription.CellUpdated), x))
             .Subscribe();
 

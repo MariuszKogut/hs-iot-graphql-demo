@@ -11,5 +11,9 @@ public class Query
         _cellSimulation = cellSimulation;
     }
 
-    public Cell GetCellData() => _cellSimulation.CreateCellWithFullData();
+    public Cell GetCell() => _cellSimulation.CreateCell();
+
+    [UseFiltering()]
+    [UseSorting()]
+    public IQueryable<Cell> GetCells() => _cellSimulation.CreateCells();
 }

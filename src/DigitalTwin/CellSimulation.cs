@@ -51,7 +51,9 @@ public class CellSimulation
             .RuleFor(x => x.Events, () => _eventsFaker.Generate(15).AsQueryable());
     }
 
-    public Cell CreateCellWithFullData() => _cellFaker.Generate();
+    public Cell CreateCell() => _cellFaker.Generate();
+    
+    public IQueryable<Cell> CreateCells() => _cellFaker.Generate(100).AsQueryable();
 
     public List<Event> CreateEvents() => _eventsFaker.Generate(10).ToList();
 }
